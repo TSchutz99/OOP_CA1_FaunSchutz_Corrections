@@ -52,6 +52,7 @@ public class Album {
     public int getNumberOfTracks(){
         return tracks.length;
     }
+
     public int getPlayingTime(){
         int PlayingTime = 0;
         for(int i = 0; i < tracks.length; i++){
@@ -69,6 +70,23 @@ public class Album {
             JOptionPane.showMessageDialog(null, "Now playing track - details are as follows: \n\n" + tracks[requestedTrack -1].toString());
     }
     public void shuffle(){
-        Song[] shuffleSongs; // more work to do
+        String output = "Shuffled playlist is as follosw!";
+
+        Song[] shuffleSongs = new Song[tracks.length];
+        boolean[] alreadypicked = new boolean[tracks.length];
+
+        for(int i = 0; i < tracks.length; i++){
+            int randomnumber = (int)(Math.random() * tracks.length);
+
+            while(alreadypicked[randomnumber] == true){
+                randomnumber = (int)(Math.random() * tracks.length);
+            }
+
+            shuffleSongs[i] = tracks[randomnumber];
+            alreadypicked[randomnumber] = true;
+            output += "\n" + shuffleSongs[i].toString();
+        }
+
+        JOptionPane.showMessageDialog(null, output, "Shuffled Playlist", JOptionPane.INFORMATION_MESSAGE);
     }
 }
