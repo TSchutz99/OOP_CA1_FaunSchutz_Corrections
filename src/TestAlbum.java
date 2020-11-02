@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 /* By: Faun Schutz
  * TestAlbum.java
@@ -22,6 +23,12 @@ public class TestAlbum{
 
         Album album1 = new Album("Now that’s what I call music 98", allSongs, "Universal Music", 2016);
 
+        JTextArea textArea = new JTextArea(5, 5);
+
+        Font textAreaFont = new Font("monospaced", Font.PLAIN, 12);
+        textArea.setFont(textAreaFont);
+
+        textArea.setText(album1.toString() + "\n\nTotal PLaying Time: " + album1.getPlayingTime() + "\n\nAlbum1Tracks");
         // couldn't remember how to do text-area
         String album1Tracks = "\t\tAlbum Tracks\n\n" +
                               "Track Number   Title   Artist\n\n";
@@ -29,7 +36,7 @@ public class TestAlbum{
             // ran out of time
         }
 
-        JOptionPane.showMessageDialog(null, album1 + "\n\nTotal PLaying Time: " + album1.getPlayingTime() + "\n\nalbum1Tracks",
+        JOptionPane.showMessageDialog(null, ,
                                     "Album Information", JOptionPane.INFORMATION_MESSAGE);
 
         album1.playTrack();
