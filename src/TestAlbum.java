@@ -43,8 +43,6 @@ public class TestAlbum{
                                                     "Shuffle?", JOptionPane.YES_NO_OPTION);
         if(shuffleConfirm == JOptionPane.YES_OPTION)
             album1.shuffle();
-        else
-            System.exit(0);
 
         System.exit(0);
     }
