@@ -60,13 +60,13 @@ public class Album {
         return PlayingTime;
     }
     public void playTrack(){
-        int requestedTrack = Integer.parseInt(JOptionPane.showInputDialog("Which track would you like to play")) -1;
+        int requestedTrack = Integer.parseInt(JOptionPane.showInputDialog("Which track would you like to play"));
 
-        if(requestedTrack > tracks.length && requestedTrack < 1)
-            JOptionPane.showMessageDialog(null, "An invalid track number as Supplied!, ",
+        if(requestedTrack < 1 && requestedTrack > tracks.length)
+            JOptionPane.showMessageDialog(null, "An invalid track number was Supplied!",
                                             "Bad Track Number", JOptionPane.ERROR_MESSAGE);
         else
-            JOptionPane.showMessageDialog(null, "Now playing track - details are as follows: \n\n" + tracks[requestedTrack].toString());
+            JOptionPane.showMessageDialog(null, "Now playing track - details are as follows: \n\n" + tracks[requestedTrack -1].toString());
     }
     public void shuffle(){
         Song[] shuffleSongs; // more work to do
