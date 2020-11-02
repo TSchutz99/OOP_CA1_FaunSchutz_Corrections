@@ -70,7 +70,7 @@ public class Album {
             JOptionPane.showMessageDialog(null, "Now playing track - details are as follows: \n\n" + tracks[requestedTrack -1].toString());
     }
     public void shuffle(){
-        String output = "Shuffled playlist is as follosw!";
+        String output = "Shuffled playlist is as follow!";
 
         Song[] shuffleSongs = new Song[tracks.length];
         boolean[] alreadypicked = new boolean[tracks.length];
@@ -84,7 +84,7 @@ public class Album {
 
             shuffleSongs[i] = tracks[randomnumber];
             alreadypicked[randomnumber] = true;
-            output += "\n" + shuffleSongs[i].toString();
+            output += "\n\n" + shuffleSongs[i].toString();
         }
 
         JOptionPane.showMessageDialog(null, output, "Shuffled Playlist", JOptionPane.INFORMATION_MESSAGE);
