@@ -22,7 +22,7 @@ public class Song {
     }
 
     public String toString(){
-        return "Track Number: " + getTrackNumber() + "   Title: " + getTitle() + "   Artist: " + getTitle() +
+        return "Track Number: " + getTrackNumber() + "   Title: " + getTitle() + "   Artist: " + getArtist() +
                "   Genre: " + getGenre() + "  Release year: " + getReleaseYear() + "   Duration: " + getDuration();
     }
     private void setTrackNumber(int trackNumber) {

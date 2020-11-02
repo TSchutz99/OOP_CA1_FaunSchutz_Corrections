@@ -60,7 +60,7 @@ public class Album {
         return PlayingTime;
     }
     public void playTrack(){
-        int requestedTrack = Integer.parseInt(JOptionPane.showInputDialog("Which track would you like to play"));
+        int requestedTrack = Integer.parseInt(JOptionPane.showInputDialog("Which track would you like to play")) -1;
 
         if(requestedTrack > tracks.length && requestedTrack < 1)
             JOptionPane.showMessageDialog(null, "An invalid track number as Supplied!, ",
