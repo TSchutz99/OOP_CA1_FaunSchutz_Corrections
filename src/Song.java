@@ -1,7 +1,7 @@
-/* By: Faun Schutz
- * Song.java
- * Start:
- *
+/* Song.java
+ * By: Faun Schutz
+ * Start: 02/11/2020
+ * finish: 02/11/2020
  */
 public class Song {
     private static int trackID = 1;

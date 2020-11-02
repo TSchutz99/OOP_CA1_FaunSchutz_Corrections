@@ -1,10 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
 
-/* By: Faun Schutz
- * TestAlbum.java
- * Start:
- *
+/* TestAlbum.java
+ * By: Faun Schutz
+ * Start: 02/11/2020
+ * finish: 02/11/2020
  */
 public class TestAlbum{
     public static void main(String[] args){
