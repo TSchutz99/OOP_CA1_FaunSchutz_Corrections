@@ -28,7 +28,12 @@ public class TestAlbum{
         Font textAreaFont = new Font("monospaced", Font.PLAIN, 12);
         textArea.setFont(textAreaFont);
 
-        textArea.setText(album1.toString() + "\n\nTotal PLaying Time: " + album1.getPlayingTime() + "\n\nAlbum1Tracks");
+        textArea.setText(album1.toString() + "\n\nTotal PLaying Time: " + album1.getPlayingTime() + "\n\n\t\tAlbum1Tracks");
+        textArea.append(String.format("%-25s%-25s%-25s", "Track Number", "Title", "Artist"));
+
+        for(int i = 0; i < album1.getTracks().length; i++){
+            textArea.append(String.format("\n\n%-25f%-25s%-25s", album1.getTracks()[i].getTrackNumber(), album1.getTracks()[i].getTitle(), album1.getTracks()[i].getArtist()));
+        }
 
         JOptionPane.showMessageDialog(null, textArea, "Album Information", JOptionPane.INFORMATION_MESSAGE);
 
